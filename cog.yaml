@@ -1,0 +1,9 @@
+build:
+  gpu: true
+  cuda: "12.1"
+  python_version: "3.10"
+  run:
+    - pip install https://github.com/Dao-AILab/flash-attention/releases/download/v2.5.7/flash_attn-2.5.7+cu122torch2.1cxx11abiFALSE-cp310-cp310-linux_x86_64.whl \
+                  https://github.com/camenduru/wheels/releases/download/replicate/vllm-0.4.0.post1-cp310-cp310-linux_x86_64.whl
+    - pip install pydantic==1.10.15
+predict: "/src/predict.py:Predictor"
